@@ -1,0 +1,46 @@
+
+.post-content {
+  @apply font-serif;
+}
+
+.post-content h1 {
+  @apply text-3xl font-bold;
+}
+
+.post-container {
+  /* max-width: 800px; */
+  width: 100%;
+}
+
+@screen lt-md {
+  .post-toc {
+    @apply p-0;
+  }
+  .toc__container {
+    @apply hidden;
+  }
+}
+
+/* @screen lt-lg {
+  .post-container {
+    max-width: 700px;
+  }
+}
+
+@screen lt-md {
+  .post-container {
+    max-width: 600px;
+  }
+
+  aside.toc__container {
+    @apply hidden;
+  }
+}
+
+@screen lt-sm {
+  .post-container {
+    max-width: 400px;
+  }
+}
+
+ */

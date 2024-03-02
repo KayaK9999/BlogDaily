@@ -1,0 +1,88 @@
+/* 代码块配置 */
+
+:root {
+  --blog-code-bg-color-light: #f6f8fa;
+  --blog-code-bg-color-dark: #1d1f21;
+  --blog-code-text-color-light: #6a737d;
+  --blog-code-text-color-dark: #c6c8ca;
+}
+
+
+div[class^="language-"] .copy::before{
+  content: "Copy";
+}
+
+div[class^="language-"] .copy.copied::before {
+  content: "Copied";
+}
+
+pre:not(div[class^="language-"] > pre) , div[class^="language-"] {
+  @apply text-sm bg-[var(--blog-code-bg-color-light)] rounded-[0.25rem] overflow-x-auto p-[1rem] mb-[1rem];
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+div[class^="language-"] .lang {
+  @apply text-xs text-[var(--blog-code-text-color-light)] font-bold;
+  order: 1;
+}
+
+div[class^="language-"] .copy {
+  @apply text-xs text-[var(--blog-code-text-color-light)] font-bold bg-transparent border-0;
+  order: 2;
+  cursor: pointer;
+}
+
+
+div[class^="language-"] .copy:hover {
+  background-color: rgba(128, 128, 128, 0.1);
+}
+
+div[class^="language-"] pre {
+  @apply overflow-x-auto;
+  order: 3;
+  flex-basis: 100%;
+}
+
+div[class^="language-"] .vp-code-dark {
+  @apply hidden;
+}
+
+div[class^="language-"] .vp-code-light {
+  @apply block;
+}
+
+pre {
+  @apply text-[var(--blog-code-text-color-light)];
+}
+
+@media (prefers-color-scheme: dark) {
+  div[class^="language-"] .vp-code-dark {
+    @apply block;
+  }
+
+  div[class^="language-"] .vp-code-light {
+    @apply hidden;
+  }
+
+  div[class^="language-"] .copy {
+    @apply bg-transparent text-[var(--blog-code-text-color-dark)];
+  }
+
+  pre:not(div[class^="language-"] > pre) , div[class^="language-"]  {
+    @apply bg-[#1d1f21];
+  }
+
+  pre {
+    @apply text-[var(--blog-code-text-color-dark)];
+  }
+
+}
+
+/* 内联代码配置 */
+
+p code {
+  @apply text-orange-400 bg-orange-50 rounded-[0.25rem] px-[0.25rem];
+}

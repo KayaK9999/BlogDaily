@@ -1,0 +1,1 @@
+import{_ as t,o as e,c as a}from"./chunks/framework.rghIQZQg.js";const m=JSON.parse('{"title":"","description":"","frontmatter":{"type":"tag","hidden":true},"headers":[],"relativePath":"tags.md","filePath":"tags.md"}'),s={name:"tags.md"};function r(o,n,c,d,p,i){return e(),a("div")}const f=t(s,[["render",r]]);export{m as __pageData,f as default};
